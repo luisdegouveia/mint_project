@@ -1,0 +1,229 @@
+/* Custom properties */
+:root {
+    --fuenteHeading: 'Dela Gothic One';
+    --fuenteParrafos: 'Montserrat', sans-serif;
+
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --primario: rgb(255, 225, 0);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+/* Propiedades globales */
+.container {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--negro);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--negro);
+}
+
+h1 {
+    font-family: var(--fuenteHeading);
+    font-size: 5rem;
+    color: var(--negro);
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+}
+
+.titulos {
+    text-transform: uppercase;
+    font-family: var(--fuenteHeading);
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .titulos {
+        align-items: center;
+    }
+}
+
+/* Estilos Navbar */
+.navbar {
+    padding-bottom: 5rem;
+}
+
+.menu-drop {
+    background-color: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+.active {
+    background-color: var(--primario);
+}
+
+.enlace-navbar:hover {
+    color: var(--primario);
+}
+
+/* Estilos About Us */
+.sobre-nosotros {
+    display: flex;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        margin: 0 auto;
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        text-align: justify;
+        padding-bottom: 2rem;
+    }    
+}
+
+.nosotros-contenido > h2 {
+    font-family: var(--fuenteHeading);
+}
+
+.nosotros-contenido > p {
+    font-family: var(--fuenteParrafos);
+    margin-top: 3rem;
+}
+
+.nosotros-imagen {
+    margin-top: 5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nosotros-imagen {
+        margin: 0 auto;
+
+    }
+}
+
+.nosotros-boton{
+    margin-top: 5rem;
+}
+
+.boton {
+    background-color: var(--primario);
+    color: var(--negro);
+    align-items: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .productos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .producto {
+        margin: 1rem 1rem 1rem 1rem;
+        position: relative;
+    }
+
+    .overlay {
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .texto-overlay {
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+
+    .producto:hover .overlay{
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 225, 0, .5);
+    }
+}
+
+.producto {
+    margin: 1rem 1rem 1rem 1rem;
+    position: relative;
+}
+
+.overlay {
+    display: none;
+    box-sizing: border-box;
+}
+
+.producto:hover .overlay{
+    display: block;
+    position: absolute;
+    height: 99.001%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 225, 0, .5);
+}
+
+.showme-boton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Estilos de Iconos */
+.iconos {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .iconos {
+        display: flex;
+        align-items: center;
+    }
+}
