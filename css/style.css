@@ -52,6 +52,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
+    font-weight: bolder;
 }
 
 h1, h2, h3 {
@@ -69,10 +70,37 @@ img {
     padding-top: 3rem;
 }
 
+.textos {
+    font-family: var(--fuenteParrafos);
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+
 @media (min-width: 768px) {
     .titulos {
         align-items: center;
     }
+}
+
+/* Estilos Botones */
+.boton {
+    background-color: var(--primario);
+    color: var(--negro);
+    align-items: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2.5rem;
+}
+
+.nosotros-boton, .showme-boton {
+    margin-top: 5rem;
+}
+
+.boton-enviar > input {
+    border: none;
+    margin-bottom: 3rem;
 }
 
 /* Estilos Navbar */
@@ -136,31 +164,8 @@ img {
     }
 }
 
-.nosotros-boton{
-    margin-top: 5rem;
-}
-
-.boton {
-    background-color: var(--primario);
-    color: var(--negro);
-    align-items: center;
-    font-weight: bolder;
-    text-transform: uppercase;
-    text-decoration: none;
-    cursor: pointer;
-    padding: 2.5rem;
-}
-
-
 @media (min-width: 768px) {
-    .productos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .producto {
+    .tarjeta {
         margin: 1rem 1rem 1rem 1rem;
         position: relative;
     }
@@ -173,10 +178,14 @@ img {
     .texto-overlay {
         text-transform: uppercase;
         font-weight: bolder;
+        text-align: center;
         font-size: 2rem;
+        margin: 0 auto;
+        margin-top: 50%;
+        width: 100%;
     }
 
-    .producto:hover .overlay{
+    .tarjeta:hover .overlay{
         display: block;
         position: absolute;
         height: 100%;
@@ -188,7 +197,7 @@ img {
     }
 }
 
-.producto {
+.tarjeta {
     margin: 1rem 1rem 1rem 1rem;
     position: relative;
 }
@@ -198,15 +207,33 @@ img {
     box-sizing: border-box;
 }
 
-.producto:hover .overlay{
+.tarjeta:hover .overlay{
     display: block;
     position: absolute;
-    height: 99.001%;
+    height: 100%;
     width: 100%;
     z-index: 10;
     top: 0;
     left: 0;
     background-color: rgba(255, 225, 0, .5);
+}
+
+.texto-overlay, .texto-overlay-largo {
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 35%;
+    width: 100%;
+}
+
+.texto-overlay-largo {
+    margin-top: 60%;
+}
+
+.texto-overlay-blog {
+    width: 20%;
 }
 
 .showme-boton {
@@ -226,4 +253,74 @@ img {
         display: flex;
         align-items: center;
     }
+}
+
+/* Estilos de los Perfiles */
+.perfil {
+    position: relative;
+}
+
+.overlay-perfil {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    height: 5rem;
+    width: 20rem;
+    background-color: var(--primario);
+}
+
+.texto-overlay-perfil {
+    display: flex;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.texto-perfil {
+    margin-top: 15rem;
+}
+
+.texto-perfil a {
+    text-transform: none;
+}
+
+/* Estilos Formulario */
+.formulario p {
+    font-size: 1.4rem;
+    color: var(--blanco);
+    margin: 2rem 0 0 0;
+}
+
+.formulario legend {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--negro);
+    margin-bottom: 3rem;
+}
+
+.formulario label {
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+}
+
+.formulario input:not([type="submit"]), textarea, select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: var(--blanco);
+    border: 1px solid var(--blanco);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.formulario textarea {
+    height: 7rem;
+}
+
+.formulario .forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
