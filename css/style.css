@@ -197,6 +197,8 @@ img {
     background-color: var(--primario);
 }
 
+
+
 .enlace-navbar:hover {
     color: var(--primario);
 }
@@ -410,6 +412,7 @@ img {
     
     .texto-perfil > a {
         text-transform: none;
+        display: flex;
         text-align: justify;
     }
 }
