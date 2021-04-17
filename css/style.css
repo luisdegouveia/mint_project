@@ -155,6 +155,10 @@ img {
         text-align: left;
         margin-right: 46rem;
     }
+
+    .texto-justificado {
+        text-align: left;
+    }
 }
 
 /* Estilos Botones */
@@ -209,13 +213,15 @@ img {
         display: flex;
         text-align: center;
     }
-}
 
-@media (min-width: 768px) {
     .nosotros {
         text-align: justify;
         padding-bottom: 2rem;
-    }    
+    } 
+    
+    .nosotros-imagen {
+        margin: 0 auto;
+    }
 }
 
 .nosotros-contenido > h2 {
@@ -232,12 +238,6 @@ img {
     align-items: center;
 }
 
-@media (min-width: 768px) {
-    .nosotros-imagen {
-        margin: 0 auto;
-    }
-}
-
 /*Estilos tarjetas productos*/
 @media (min-width: 768px) {
     .tarjeta {
@@ -245,7 +245,7 @@ img {
         position: relative;
     }
 
-    .overlay {
+    .overlay, .overlay-blog {
         display: flex;
         box-sizing: border-box;
     }
@@ -270,6 +270,17 @@ img {
         left: 60;
         background-color: rgba(255, 225, 0, .5);
     }
+
+    .tarjeta:hover .overlay-blog {
+        display: block;
+        position: absolute;
+        height: 67%;
+        width: 63.5%;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 225, 0, .5);
+    }
 }
 
 .tarjeta {
@@ -277,7 +288,7 @@ img {
     position: relative;
 }
 
-.overlay {
+.overlay, .overlay-blog {
     display: none;
     box-sizing: border-box;
 }
@@ -291,6 +302,23 @@ img {
     top: 0;
     left: 0;
     background-color: rgba(255, 225, 0, .5);
+}
+
+.tarjeta:hover .overlay-blog {
+    display: block;
+    position: absolute;
+    height: 55.5%;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 225, 0, .5);
+}
+
+.texto-justificado h3 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-top: 2rem;
 }
 
 .texto-overlay, .texto-overlay-largo {
@@ -471,4 +499,42 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/*Estilos Footer*/
+.contact-info {
+    margin-top: 2.5rem;
+    line-height: 1.5rem;
+}
+
+.contact-icon {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+}
+
+.barra-footer {
+    text-align: center;
+}
+
+.footer-background {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.cambiacolor > a {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.cambiacolor > svg {
+    color: white
+}
+
+.subir {
+    display: flex;
+    padding-bottom: 2.3rem;
 }
