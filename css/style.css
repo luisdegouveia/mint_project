@@ -307,7 +307,7 @@ img {
 .tarjeta:hover .overlay-blog {
     display: block;
     position: absolute;
-    height: 55.5%;
+    height: 63.5%;
     width: 100%;
     z-index: 10;
     top: 0;
@@ -521,17 +521,18 @@ img {
     margin-top: 3rem;
     padding-top: 2.5rem;
     background-color: rgb(30, 30, 30);
-    color: white;
+    color: var(--blanco);
+    font-family: var(--fuenteParrafos);
 }
 
 .cambiacolor > a {
-    color: white;
+    color: var(--blanco);
     display: flex;
     flex-direction: row;
 }
 
 .cambiacolor > svg {
-    color: white
+    color: var(--blanco)
 }
 
 .subir {
